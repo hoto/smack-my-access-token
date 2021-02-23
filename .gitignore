@@ -6,3 +6,5 @@ bin/
 
 # goreleaser
 dist
+
+config.toml
