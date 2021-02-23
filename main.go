@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/hoto/smack-my-login/config"
+	"github.com/hoto/smack-my-access-token/config"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 )

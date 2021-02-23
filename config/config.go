@@ -25,7 +25,7 @@ func ParseArgsAndFlags() {
 	flag.Parse()
 
 	if *showVersion {
-		fmt.Printf("smack-my-login version %s, commit %s, build %s\n",
+		fmt.Printf("smack-my-access-token version %s, commit %s, build %s\n",
 			Version, ShortCommit, BuildDate)
 		os.Exit(0)
 	}
@@ -41,7 +41,7 @@ func overrideUsage() func() {
 			os.Stdout,
 			"Usage:"+
 				"\n\t"+
-				"smack-my-login [flags]"+
+				"smack-my-access-token [flags]"+
 				"\n\n"+
 				"Flags:"+
 				"\n")

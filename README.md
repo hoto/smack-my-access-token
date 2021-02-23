@@ -1,6 +1,6 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](/LICENSE)
-[![Build status](https://github.com/hoto/smack-my-login/workflows/Build%20and%20test/badge.svg?branch=master)](https://github.com/hoto/smack-my-login/actions)
-[![Release](https://img.shields.io/github/release/hoto/smack-my-login.svg?style=flat-square)](https://github.com/hoto/smack-my-login/releases/latest)
+[![Build status](https://github.com/hoto/smack-my-access-token/workflows/Build%20and%20test/badge.svg?branch=master)](https://github.com/hoto/smack-my-access-token/actions)
+[![Release](https://img.shields.io/github/release/hoto/smack-my-access-token.svg?style=flat-square)](https://github.com/hoto/smack-my-access-token/releases/latest)
 [![Powered By: goreleaser](https://img.shields.io/badge/powered%20by-goreleaser-green.svg?style=flat-square)](https://github.com/goreleaser/goreleaser)
 
 # Smack my login
@@ -28,23 +28,23 @@ pm.sendRequest(getAccessTokenRequest, (err, res) => {
     
 Mac:
 
-    brew install hoto/repo/smack-my-login
+    brew install hoto/repo/smack-my-access-token
 
 Mac or Linux:
 
     sudo curl -L \
-      "https://github.com/hoto/smack-my-login/releases/download/1.0.0/smack-my-login_1.0.0_$(uname -s)_$(uname -m)" \
-       -o /usr/local/bin/smack-my-login
+      "https://github.com/hoto/smack-my-access-token/releases/download/1.0.0/smack-my-access-token_1.0.0_$(uname -s)_$(uname -m)" \
+       -o /usr/local/bin/smack-my-access-token
 
-    sudo chmod +x /usr/local/bin/smack-my-login
+    sudo chmod +x /usr/local/bin/smack-my-access-token
     
-Or manually download binary from [releases](https://github.com/hoto/smack-my-login/releases).
+Or manually download binary from [releases](https://github.com/hoto/smack-my-access-token/releases).
     
 ### Run
 
-    smack-my-login --help
-    smack-my-login --version
-    smack-my-login --port 5000
+    smack-my-access-token --help
+    smack-my-access-token --version
+    smack-my-access-token --port 5000
 
     curl localhost:5000
 
@@ -52,14 +52,14 @@ Or manually download binary from [releases](https://github.com/hoto/smack-my-log
 
 Build and test:
 
-    go get github.com/hoto/smack-my-login
+    go get github.com/hoto/smack-my-access-token
     
     make dependencies build test
     
 Build binary:
 
      make build
-    ./bin/smack-my-login
+    ./bin/smack-my-access-token
 
 Run with arguments:
 
@@ -68,6 +68,6 @@ Run with arguments:
 Install to global golang bin directory:
 
     make install
-    smack-my-login
+    smack-my-access-token
     
     

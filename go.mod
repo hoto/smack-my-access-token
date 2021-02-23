@@ -1,4 +1,4 @@
-module github.com/hoto/smack-my-login
+module github.com/hoto/smack-my-access-token
 
 go 1.16
 

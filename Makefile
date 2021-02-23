@@ -1,6 +1,6 @@
 all: clean build test run install goreleaser-release goreleaser-dry-run goreleaser-dry-run
 
-REPO_NAME = github.com/hoto/smack-my-login
+REPO_NAME = github.com/hoto/smack-my-access-token
 
 clean:
 	go clean
@@ -12,13 +12,13 @@ dependencies:
 	go mod verify
 
 build: dependencies
-	go build -ldflags="-X '${REPO_NAME}/config.Version=0.0.0' -X '${REPO_NAME}/config.ShortCommit=HASH' -X '${REPO_NAME}/config.BuildDate=DATE'" -o bin/smack-my-login
+	go build -ldflags="-X '${REPO_NAME}/config.Version=0.0.0' -X '${REPO_NAME}/config.ShortCommit=HASH' -X '${REPO_NAME}/config.BuildDate=DATE'" -o bin/smack-my-access-token
 
 test:
 	go test -v ./...
 
 run: clean build
-	./bin/smack-my-login $(arg)
+	./bin/smack-my-access-token $(arg)
 
 install: clean build
 	go install -v ./...
