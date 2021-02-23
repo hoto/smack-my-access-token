@@ -9,10 +9,11 @@ import (
 
 func main() {
 	config.ParseArgsAndFlags()
+	secrets := loadSecrets()
 
 	e := echo.New()
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
-	e.GET("/", generateDocusignJWT)
+	e.GET("/docusign", generateDocusignJWT(secrets))
 	e.Logger.Fatal(e.Start(fmt.Sprintf(":%d", config.Port)))
 }

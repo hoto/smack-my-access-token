@@ -42,6 +42,9 @@ Or manually download binary from [releases](https://github.com/hoto/smack-my-acc
     
 ### Run
 
+    # fill in needed secrets
+    cp secrets.toml.template secrets.toml
+
     smack-my-access-token --help
     smack-my-access-token --version
     smack-my-access-token --port 5000
