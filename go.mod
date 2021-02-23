@@ -1,4 +1,4 @@
-module github.com/hoto/template-go-web-server
+module github.com/hoto/smack-my-login
 
 go 1.16
 

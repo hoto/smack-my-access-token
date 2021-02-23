@@ -1,6 +1,6 @@
 all: clean build test run install goreleaser-release goreleaser-dry-run goreleaser-dry-run
 
-REPO_NAME = github.com/hoto/template-go-web-server
+REPO_NAME = github.com/hoto/smack-my-login
 
 clean:
 	go clean
@@ -12,13 +12,13 @@ dependencies:
 	go mod verify
 
 build: dependencies
-	go build -ldflags="-X '${REPO_NAME}/config.Version=0.0.0' -X '${REPO_NAME}/config.ShortCommit=HASH' -X '${REPO_NAME}/config.BuildDate=DATE'" -o bin/template-go-web-server
+	go build -ldflags="-X '${REPO_NAME}/config.Version=0.0.0' -X '${REPO_NAME}/config.ShortCommit=HASH' -X '${REPO_NAME}/config.BuildDate=DATE'" -o bin/smack-my-login
 
 test:
 	go test -v ./...
 
 run: clean build
-	./bin/template-go-web-server $(arg)
+	./bin/smack-my-login $(arg)
 
 install: clean build
 	go install -v ./...

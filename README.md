@@ -1,39 +1,50 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](/LICENSE)
-[![Build status](https://github.com/hoto/template-go-web-server/workflows/Build%20and%20test/badge.svg?branch=master)](https://github.com/hoto/template-go-web-server/actions)
-[![Release](https://img.shields.io/github/release/hoto/template-go-web-server.svg?style=flat-square)](https://github.com/hoto/template-go-web-server/releases/latest)
+[![Build status](https://github.com/hoto/smack-my-login/workflows/Build%20and%20test/badge.svg?branch=master)](https://github.com/hoto/smack-my-login/actions)
+[![Release](https://img.shields.io/github/release/hoto/smack-my-login.svg?style=flat-square)](https://github.com/hoto/smack-my-login/releases/latest)
 [![Powered By: goreleaser](https://img.shields.io/badge/powered%20by-goreleaser-green.svg?style=flat-square)](https://github.com/goreleaser/goreleaser)
 
-# Golang REST web server template repository
+# Smack my login
 
-Uses [echo](https://github.com/labstack/echo) as the web framework.
+Smackingtastic way of generating JWTs and HMAC signatures served over the web.  
 
----
+Pure fantasy when using with postman in a pre-script:
 
-Clone and replace `template-go-web-server` with the name of your project.
+```javascript
+const getAccessTokenRequest = {
+    url: 'http://localhost:5050/docusign',
+    method: 'GET',
+};
 
-Github action will use `goreleaser` to automatically releases formula to homebrew repo at [hoto/homebrew-repo](https://github.com/hoto/homebrew-repo) on every git tag.
+pm.sendRequest(getAccessTokenRequest, (err, res) => {
+    console.log(err ? err : res.json());
+    if (err === null) {
+        var responseJson = res.json();
+        pm.environment.set("currentAccessToken", responseJson.access_token);
+    }
+});
+```
 
 ### Installation
     
 Mac:
 
-    brew install hoto/repo/template-go-web-server
+    brew install hoto/repo/smack-my-login
 
 Mac or Linux:
 
     sudo curl -L \
-      "https://github.com/hoto/template-go-web-server/releases/download/1.0.0/template-go-web-server_1.0.0_$(uname -s)_$(uname -m)" \
-       -o /usr/local/bin/template-go-web-server
+      "https://github.com/hoto/smack-my-login/releases/download/1.0.0/smack-my-login_1.0.0_$(uname -s)_$(uname -m)" \
+       -o /usr/local/bin/smack-my-login
 
-    sudo chmod +x /usr/local/bin/template-go-web-server
+    sudo chmod +x /usr/local/bin/smack-my-login
     
-Or manually download binary from [releases](https://github.com/hoto/template-go-web-server/releases).
+Or manually download binary from [releases](https://github.com/hoto/smack-my-login/releases).
     
 ### Run
 
-    template-go-web-server --help
-    template-go-web-server --version
-    template-go-web-server --port 5000
+    smack-my-login --help
+    smack-my-login --version
+    smack-my-login --port 5000
 
     curl localhost:5000
 
@@ -41,14 +52,14 @@ Or manually download binary from [releases](https://github.com/hoto/template-go-
 
 Build and test:
 
-    go get github.com/hoto/template-go-web-server
+    go get github.com/hoto/smack-my-login
     
     make dependencies build test
     
 Build binary:
 
      make build
-    ./bin/template-go-web-server
+    ./bin/smack-my-login
 
 Run with arguments:
 
@@ -57,6 +68,6 @@ Run with arguments:
 Install to global golang bin directory:
 
     make install
-    template-go-web-server
+    smack-my-login
     
     

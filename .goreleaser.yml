@@ -2,7 +2,7 @@
 builds:
   - main: .
     ldflags:
-      - '-s -w -X github.com/hoto/template-go-web-server/config.Version={{.Version}} -X github.com/hoto/template-go-web-server/config.ShortCommit={{.ShortCommit}} -X github.com/hoto/template-go-web-server/config.BuildDate={{.Date}}'
+      - '-s -w -X github.com/hoto/smack-my-login/config.Version={{.Version}} -X github.com/hoto/smack-my-login/config.ShortCommit={{.ShortCommit}} -X github.com/hoto/smack-my-login/config.BuildDate={{.Date}}'
     env:
       - CGO_ENABLED=0
     ignore:
@@ -35,7 +35,7 @@ brews:
       owner: hoto
       name: homebrew-repo
     folder: Formula
-    homepage:  https://github.com/hoto/template-go-web-server
+    homepage:  https://github.com/hoto/smack-my-login
     description: Golang CLI template.
     test: |
-      system "#{bin}/template-go-web-server --version"
+      system "#{bin}/smack-my-login --version"

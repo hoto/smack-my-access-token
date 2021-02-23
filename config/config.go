@@ -12,7 +12,7 @@ var (
 	ShortCommit string
 	BuildDate   string
 	Debug       bool
-	Port	 	int
+	Port        int
 )
 
 func ParseArgsAndFlags() {
@@ -25,7 +25,7 @@ func ParseArgsAndFlags() {
 	flag.Parse()
 
 	if *showVersion {
-		fmt.Printf("template-go-web-server version %s, commit %s, build %s\n",
+		fmt.Printf("smack-my-login version %s, commit %s, build %s\n",
 			Version, ShortCommit, BuildDate)
 		os.Exit(0)
 	}
@@ -41,7 +41,7 @@ func overrideUsage() func() {
 			os.Stdout,
 			"Usage:"+
 				"\n\t"+
-				"template-go-web-server [flags]"+
+				"smack-my-login [flags]"+
 				"\n\n"+
 				"Flags:"+
 				"\n")
