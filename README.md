@@ -3,7 +3,7 @@
 [![Release](https://img.shields.io/github/release/hoto/smack-my-access-token.svg?style=flat-square)](https://github.com/hoto/smack-my-access-token/releases/latest)
 [![Powered By: goreleaser](https://img.shields.io/badge/powered%20by-goreleaser-green.svg?style=flat-square)](https://github.com/goreleaser/goreleaser)
 
-# Smack my login
+# Smack my access token
 
 Smackingtastic way of generating JWTs and HMAC signatures served over the web.  
 
